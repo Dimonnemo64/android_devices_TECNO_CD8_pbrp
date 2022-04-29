@@ -19,14 +19,16 @@ DEVICE_PATH := device/TECNO/CD8
 # Release name
 PRODUCT_RELEASE_NAME := TECNO-CD8
 
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/pb/config/common.mk)
 
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root) \
-    device/TECNO/CD6/prebuilt/dtb:dtb
+    device/TECNO/CD8/prebuilt/dtb:dtb
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := CD8
