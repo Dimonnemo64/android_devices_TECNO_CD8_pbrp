@@ -133,7 +133,7 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TW_INCLUDE_CRYPTO := true
 #TW_INCLUDE_CRYPTO_FBE := true
 
- Additional binaries & libraries needed for recovery
+#Additional binaries & libraries needed for recovery
 TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster4 \
     libpuresoftkeymasterdevice \
