@@ -27,8 +27,8 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/pb/config/common.mk)
 
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root) \
-    device/TECNO/CD8/prebuilt/dtb:dtb
+#PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root) \
+#    device/TECNO/CD8/prebuilt/dtb:dtb
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := CD8
@@ -36,11 +36,6 @@ PRODUCT_NAME := omni_$(PRODUCT_DEVICE)
 PRODUCT_BRAND := TECNO
 PRODUCT_MODEL := TECNO CD8
 PRODUCT_MANUFACTURER := TECNO MOBILE LIMITED
-
-# fastbootd
-PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
-    fastbootd
 
 # HACK: Set vendor patch level
 PRODUCT_PROPERTY_OVERRIDES += \
