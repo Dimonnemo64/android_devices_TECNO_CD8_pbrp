@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/TECNO/CD8
+DEVICE_PATH := device/tecno/CD8-RU
 
 # Release name
-PRODUCT_RELEASE_NAME := TECNO-CD8
+PRODUCT_RELEASE_NAME := TECNO CD8
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
@@ -25,17 +25,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/pb/config/common.mk)
+#$(call inherit-product, vendor/pb/config/common.mk)
+$(call inherit-product, vendor/omni/config/common.mk)
 
 #PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root) \
 #    device/TECNO/CD8/prebuilt/dtb:dtb
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := CD8
-PRODUCT_NAME := omni_$(PRODUCT_DEVICE)
+PRODUCT_DEVICE := TECNO-CD8
+PRODUCT_NAME := omni_CD8-RU
 PRODUCT_BRAND := TECNO
 PRODUCT_MODEL := TECNO CD8
 PRODUCT_MANUFACTURER := TECNO MOBILE LIMITED
+#ro.vendor.tran.device.name=TECNO CAMON 15 Pro
 
 # HACK: Set vendor patch level
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -46,5 +48,8 @@ TARGET_SCREEN_WIDTH := 720
 TARGET_SCREEN_HEIGHT := 1600
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=CD8-OP \
-    PRODUCT_DEVICE=TECNO-CD8
+    TARGET_DEVICE=Armor_7E_Q \
+    PRODUCT_NAME=Armor_7E_Q \
+    PRIVATE_BUILD_DESC="full_k79v1_64-user 10 QP1A.190711.020 1594210780 release-keys"
+
+BUILD_FINGERPRINT := TECNO/CD8-RU/TECNO-CD8:10/QP1A.190711.020/B-RU-201228V115:user/release-keys
