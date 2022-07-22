@@ -22,7 +22,10 @@ PRODUCT_RELEASE_NAME := TECNO CD8
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+
+# Inherit from device
+$(call inherit-product, device/tecno/CD8-RU/device.mk)
 
 # Inherit from our custom product configuration
 #$(call inherit-product, vendor/pb/config/common.mk)
@@ -44,12 +47,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.build.security_patch=2099-12-31
 	
 # Resolution
-TARGET_SCREEN_WIDTH := 720
-TARGET_SCREEN_HEIGHT := 1600
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 2340
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE=Armor_7E_Q \
-    PRODUCT_NAME=Armor_7E_Q \
-    PRIVATE_BUILD_DESC="full_k79v1_64-user 10 QP1A.190711.020 1594210780 release-keys"
+    TARGET_DEVICE=TECNO-CD8 \
+    PRODUCT_NAME=CD8-RU \
+    PRIVATE_BUILD_DESC="full_cd8_h655-user 10 QP1A.190711.020 62296 release-keys"
 
 BUILD_FINGERPRINT := TECNO/CD8-RU/TECNO-CD8:10/QP1A.190711.020/B-RU-201228V115:user/release-keys
