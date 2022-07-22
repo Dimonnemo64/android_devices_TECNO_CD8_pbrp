@@ -60,7 +60,12 @@ jobs:
       run: |
         echo "::set-output name=date::$(date +%F)"
       id: var
-      
+
+    - name: Set Swap Space
+      uses: pierotofy/set-swap-space@master
+      with:
+        swap-size-gb: 10
+
     - name: Install repo
       run: |
         mkdir ~/bin
