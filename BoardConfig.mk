@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/TECNO/CD8
+DEVICE_PATH := device/tecno/CD8
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
