@@ -18,7 +18,7 @@ DEVICE_PATH := device/tecno/cd8_h655
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
-BUILD_BROKEN_DUP_RULES := true
+#BUILD_BROKEN_DUP_RULES := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -99,7 +99,7 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := TECNO-CD8
+TARGET_OTA_ASSERT_DEVICE := TECNO-CD8,TECNO CD8
 
 # Avb
 BOARD_AVB_ENABLE := true
@@ -132,13 +132,14 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 # Crypto
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
 
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
-TW_EXTRA_LANGUAGES := true
+TW_EXTRA_LANGUAGES := false
 TW_INCLUDE_NTFS_3G := true
 TW_USE_TOOLBOX := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
@@ -150,11 +151,13 @@ TW_EXCLUDE_TWRPAPP := true
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
+PLATFORM_VERSION := 16.1.0
+VENDOR_SECURITY_PATCH := 2099-12-31
 
 # Debug
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 
 # PitchBlack
-PB_TORCH_PATH := /sys/devices/virtual/torch/torch/torch_level
-PB_TORCH_MAX_BRIGHTNESS := 1
+#PB_TORCH_PATH := /sys/devices/virtual/torch/torch/torch_level
+#PB_TORCH_MAX_BRIGHTNESS := 1
