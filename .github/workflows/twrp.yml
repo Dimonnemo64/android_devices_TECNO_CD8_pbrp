@@ -1,4 +1,4 @@
-name: Building recovery TWRP10.0
+name: Building TWRP10.0
 
 on:
   workflow_dispatch:
