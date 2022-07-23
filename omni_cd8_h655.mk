@@ -33,7 +33,7 @@ $(call inherit-product, vendor/omni/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := TECNO-CD8
-PRODUCT_NAME := omni_cd8_h655
+PRODUCT_NAME := omni_CD8-RU
 PRODUCT_BRAND := TECNO
 PRODUCT_MODEL := TECNO CD8
 PRODUCT_MANUFACTURER := TECNO MOBILE LIMITED
