@@ -18,3 +18,6 @@ LOCAL_PATH := device/tecno/cd8_h655
 
 # dynamic partition stuff
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+#TARGET_VENDOR_PRODUCT_NAME := TECNO-CD8
+PRODUCT_BOARD := TECNO-CD8

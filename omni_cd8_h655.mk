@@ -31,16 +31,12 @@ $(call inherit-product, device/tecno/CD8-RU/device.mk)
 #$(call inherit-product, vendor/pb/config/common.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 
-#PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root) \
-#    device/TECNO/CD8/prebuilt/dtb:dtb
-
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := TECNO-CD8
 PRODUCT_NAME := omni_cd8_h655
 PRODUCT_BRAND := TECNO
 PRODUCT_MODEL := TECNO CD8
 PRODUCT_MANUFACTURER := TECNO MOBILE LIMITED
-#ro.vendor.tran.device.name=TECNO CAMON 15 Pro
 
 # HACK: Set vendor patch level
 PRODUCT_PROPERTY_OVERRIDES += \
