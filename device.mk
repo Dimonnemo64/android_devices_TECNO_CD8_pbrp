@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/tecno/cd8_h655
+LOCAL_PATH := device/tecno/CD8-RU
 
 # dynamic partition stuff
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 #TARGET_VENDOR_PRODUCT_NAME := TECNO-CD8
-PRODUCT_BOARD := TECNO-CD8
+PRODUCT_BOARD := cd8_h655
